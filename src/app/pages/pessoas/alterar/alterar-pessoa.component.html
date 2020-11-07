@@ -1,0 +1,24 @@
+<form [formGroup]="alterarForm">
+  <div class="p-grid corpo">
+    <label>Nome</label>
+
+    <input class="p-col-12"
+           type="text"
+           formControlName="nome"
+           pInputText/>
+
+    <div class="p-col-12 botoes">
+      <button type="button"
+              class="btn btn-light"
+              (click)="fechar()">Cancelar
+      </button>
+
+      <button type="button"
+              class="btn btn-danger"
+              style="margin-left: 1%"
+              [disabled]="alterarForm.invalid"
+              (click)="alterar()">Confirmar
+      </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,34 @@
+<div class="corpo">
+  <div class="botao">
+    <button type="button"
+            (click)="voltar()"
+            class="btn btn-light">VOLTAR</button>
+    <button type="button"
+            (click)="abrirModalCadastro()"
+            class="btn btn-danger">CADASTRAR</button>
+  </div>
+
+  <div class="tabela">
+    <p-table [value]="pessoa.tarefas">
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="text-align: center">Código</th>
+          <th style="text-align: center">Titulo</th>
+          <th style="text-align: center">Descrição</th>
+          <th style="text-align: center">Ações</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-tarefa>
+        <tr>
+          <td>{{tarefa.id}}</td>
+          <td style="text-align: left">{{tarefa.titulo}}</td>
+          <td>{{tarefa.descricao}}</td>
+          <td style="text-align: center">
+            <i class="pi pi-pencil icon" (click)="abrirModalAlteracao(tarefa)"></i>
+            <i class="pi pi-times icon"  (click)="abrirModalDeletar(tarefa)"></i>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

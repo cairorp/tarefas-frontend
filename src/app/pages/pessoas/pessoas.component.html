@@ -1,0 +1,36 @@
+<div class="corpo">
+  <div class="botao">
+    <button type="button"
+            class="btn btn-light"
+            (click)="abrirModalGrafico()">GRÁFICO</button>
+
+    <button type="button"
+            (click)="abrirModalCadastro()"
+            class="btn btn-danger">CADASTRAR</button>
+  </div>
+
+  <div class="tabela">
+    <p-table [value]="pessoas">
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="text-align: center">Código</th>
+          <th style="text-align: center">Nome</th>
+          <th style="text-align: center">Quantidade de tarefas</th>
+          <th style="text-align: center">Ações</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-pessoa>
+        <tr>
+          <td>{{pessoa.id}}</td>
+          <td style="text-align: left">{{pessoa.nome}}</td>
+          <td>{{pessoa.qtdTarefas}}</td>
+          <td style="text-align: center">
+            <i class="pi pi-pencil icon" (click)="abrirModalAlteracao(pessoa)"></i>
+            <i class="pi pi-folder-open icon" (click)="abrirTarefas(pessoa.id)"></i>
+            <i class="pi pi-times icon"  (click)="abrirModalDeletar(pessoa)"></i>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

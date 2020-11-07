@@ -1,0 +1,41 @@
+@import "functions";
+@import "colors";
+
+.ui-menuitem-text {
+  padding-left: size(1);
+}
+
+.ui-state-active {
+  background: $primaryDarken;
+}
+
+.ui-panelmenu-header-link {
+  padding: size(1.5) !important;
+}
+
+p-panelmenusub > ul .ui-menuitem-link {
+  padding-left: size(2.5) !important;
+}
+
+a {
+  transition: all 150ms;
+   padding: size(1) !important;
+}
+
+.ui-panelmenu-content-wrapper {
+  background: $gray;
+
+  & > .ui-panelmenu-content {
+    border: none !important;
+  }
+}
+
+a:hover {
+  background: $gray2 !important;
+  color: black !important;
+}
+
+.ui-panelmenu-content-wrapper * {
+  background: transparent !important;
+}
+

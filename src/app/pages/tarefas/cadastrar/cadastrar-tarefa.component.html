@@ -1,0 +1,31 @@
+<form [formGroup]="cadastrarForm">
+  <div class="p-grid corpo">
+    <label>Titulo</label>
+
+    <input class="p-col-12"
+           type="text"
+           formControlName="titulo"
+           pInputText/>
+
+    <label>Descrição</label>
+
+    <input class="p-col-12"
+           type="text"
+           formControlName="descricao"
+           pInputText/>
+
+    <div class="p-col-12 botoes">
+      <button type="button"
+              class="btn btn-light"
+              (click)="fechar()">Cancelar
+      </button>
+
+      <button type="button"
+              class="btn btn-danger"
+              style="margin-left: 1%"
+              [disabled]="cadastrarForm.invalid"
+              (click)="cadastrar()">Confirmar
+      </button>
+    </div>
+  </div>
+</form>

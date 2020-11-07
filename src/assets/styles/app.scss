@@ -1,0 +1,34 @@
+@import "animate.css";
+@import "functions";
+
+body {
+  overflow: hidden;
+  @include reset;
+}
+
+mat-sidenav {
+  width: size(35);
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+
+mat-sidenav-content {
+  box-sizing: border-box;
+}
+
+.col-acoes{
+  text-align: center;
+}
+
+.icon-acao{
+  padding-left: 3%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

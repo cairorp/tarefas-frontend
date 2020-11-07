@@ -1,0 +1,41 @@
+@mixin fullWidth() {
+  width: 100%;
+}
+
+@mixin fullHeight() {
+  height: 100%;
+}
+
+@mixin fullHeightDevice() {
+  height: 100vh;
+}
+
+@mixin reset() {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fullSizeDevice() {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin fullSize() {
+  width: 100%;
+  height: 100%;
+}
+
+@function size($s) {
+  @return ($s * 8px);
+}
+
+@mixin roundedBorder() {
+  border-radius: 4px;
+}
